@@ -1,0 +1,84 @@
+/**/
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 40px;
+  width: 100vw;
+  height: 30px;
+  background-color: white;
+  z-index: 1;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menu {
+  color: #f97807;
+  font-size: x-large;
+}
+
+/**/
+#hello {
+  position: absolute;
+  width: 100vw;
+  height: 934px;
+  left: 0px;
+  top: 95px;
+
+  background-color: #fff1e3;
+}
+
+#my-name {
+  font-size: xx-large;
+  color: #5898f8;
+}
+
+#hello-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hello-message-item {
+  padding: 15px 0px;
+}
+
+.hello-message-item-text {
+  color: #f97807;
+  font-size: xx-large;
+}
+
+/**/
+#about {
+  position: absolute;
+  width: 100vw;
+  height: 934px;
+  left: 0px;
+  top: 1022px;
+}
+
+/**/
+footer {
+  position: absolute;
+  width: 100vw;
+  height: 742px;
+  left: 0px;
+  top: 1959px;
+  background-color: #dfecff;
+}
+
+#email-text {
+}
+
+#github-text {
+}
+
+#blog-text {
+}

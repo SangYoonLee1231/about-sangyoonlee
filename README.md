@@ -1,2 +1,5 @@
-# about-sangyoonlee
-나만의 자기소개 웹페이지 만들기 (연습용)
+<div align=center>
+
+# 나만의 자기소개 웹페이지 만들기
+
+</div>
