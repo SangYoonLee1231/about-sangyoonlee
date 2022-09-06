@@ -1,4 +1,46 @@
-/**/
+/* Basic */
+@font-face {
+  font-family: "SeoulNamsanM";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SeoulNamsan";
+  font-weight: 800;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+body {
+  font-family: "SeoulNamsanM";
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: #4f94fc;
+}
+
+/* header */
 header {
   position: fixed;
   top: 0px;
@@ -22,7 +64,7 @@ header {
   font-size: x-large;
 }
 
-/**/
+/* section - hello */
 #hello {
   position: absolute;
   width: 100vw;
@@ -33,12 +75,7 @@ header {
   background-color: #fff1e3;
 }
 
-#my-name {
-  font-size: xx-large;
-  color: #5898f8;
-}
-
-#hello-message {
+#hello-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,15 +84,41 @@ header {
 }
 
 .hello-message-item {
-  padding: 15px 0px;
+  padding: 35px 0px;
 }
 
 .hello-message-item-text {
   color: #f97807;
-  font-size: xx-large;
+  font-size: 40px;
+  font-family: "SeoulNamsan";
 }
 
-/**/
+#my-name {
+  font-size: 40px;
+  color: #5898f8;
+  font-family: "SeoulNamsan";
+}
+
+.all-text {
+  animation: fade 3.5s infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* section - about */
 #about {
   position: absolute;
   width: 100vw;
@@ -64,7 +127,46 @@ header {
   top: 1022px;
 }
 
-/**/
+#about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 934px;
+}
+
+#about-title-text {
+  font-size: xx-large;
+  color: #f97807;
+  font-family: "SeoulNamsan";
+}
+
+#about-inside-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#about-title {
+  padding-bottom: 100px;
+}
+
+#profile-title,
+#profile-text {
+  padding-right: 50px;
+}
+
+#profile-title p {
+  font-size: x-large;
+  color: #f97807;
+}
+
+#profile-text p {
+  font-size: x-large;
+  color: #4f94fc;
+}
+
+/* footer - contact */
 footer {
   position: absolute;
   width: 100vw;
@@ -74,6 +176,30 @@ footer {
   background-color: #dfecff;
 }
 
+#contact-container {
+  height: 742px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-title {
+  padding: 30px 0px;
+}
+
+#contact-title-text {
+  font-size: xx-large;
+  color: #4f94fc;
+  font-family: "SeoulNamsan";
+}
+
+.title-text {
+  font-size: x-large;
+  color: #4f94fc;
+}
+
+/*
 #email-text {
 }
 
@@ -82,3 +208,4 @@ footer {
 
 #blog-text {
 }
+*/
