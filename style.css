@@ -27,6 +27,14 @@ body {
   font-family: "SeoulNamsanM";
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -48,7 +56,7 @@ header {
   right: 0px;
   padding: 25px 0px 20px 0px;
   width: 100vw;
-  height: 30px;
+  height: 10px;
   background-color: white;
   z-index: 1;
 }
@@ -68,7 +76,7 @@ header {
 #hello {
   position: absolute;
   width: 100vw;
-  height: 90vh;
+  height: 92vh;
   left: 0px;
   top: 75px;
 
@@ -77,6 +85,8 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  animation: fade-hello-background 3s infinite;
 }
 
 .hello-message-item {
@@ -96,10 +106,10 @@ header {
 }
 
 .all-text {
-  animation: fade 3.5s infinite;
+  animation: fade-title 4s infinite;
 }
 
-@keyframes fade {
+@keyframes fade-title {
   0% {
     opacity: 0;
   }
@@ -114,11 +124,29 @@ header {
   }
 }
 
+@keyframes fade-hello-background {
+  0% {
+    background-color: #fff1e3;
+  }
+  45% {
+    background-color: #fff1e3;
+  }
+  55% {
+    background-color: #fcf3ea;
+  }
+  65% {
+    background-color: #fff1e3;
+  }
+  100% {
+    background-color: #fff1e3;
+  }
+}
+
 /* section - about */
 #about {
   position: absolute;
   width: 100vw;
-  height: 90vh;
+  height: 92vh;
   left: 0px;
   top: 1002px;
   display: flex;
@@ -128,7 +156,7 @@ header {
 }
 
 #about-title-text {
-  font-size: xx-large;
+  font-size: 45px;
   color: #f97807;
   font-family: "SeoulNamsan";
 }
@@ -140,12 +168,15 @@ header {
 }
 
 #about-title {
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 
-#profile-title,
-#profile-text {
+#profile-title {
   padding-right: 50px;
+}
+
+#profile-text {
+  padding-right: 150px;
 }
 
 #profile-title p {
@@ -158,11 +189,16 @@ header {
   color: #4f94fc;
 }
 
+img {
+  border: 3px solid #f97807;
+  border-radius: 10px;
+}
+
 /* footer - contact */
 footer {
   position: absolute;
   width: 100vw;
-  height: 70vh;
+  height: 75vh;
   left: 0px;
   top: 1939px;
   background-color: #dfecff;
@@ -174,6 +210,7 @@ footer {
 
 #contact-title {
   padding: 30px 0px;
+  margin-bottom: 20px;
 }
 
 #contact-title-text {
