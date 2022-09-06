@@ -46,7 +46,7 @@ header {
   top: 0px;
   left: 0px;
   right: 0px;
-  padding: 40px;
+  padding: 25px 0px 20px 0px;
   width: 100vw;
   height: 30px;
   background-color: white;
@@ -68,19 +68,15 @@ header {
 #hello {
   position: absolute;
   width: 100vw;
-  height: 934px;
+  height: 90vh;
   left: 0px;
-  top: 95px;
+  top: 75px;
 
   background-color: #fff1e3;
-}
-
-#hello-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .hello-message-item {
@@ -122,17 +118,13 @@ header {
 #about {
   position: absolute;
   width: 100vw;
-  height: 934px;
+  height: 90vh;
   left: 0px;
-  top: 1022px;
-}
-
-#about-container {
+  top: 1002px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 934px;
 }
 
 #about-title-text {
@@ -170,14 +162,10 @@ header {
 footer {
   position: absolute;
   width: 100vw;
-  height: 742px;
+  height: 70vh;
   left: 0px;
-  top: 1959px;
+  top: 1939px;
   background-color: #dfecff;
-}
-
-#contact-container {
-  height: 742px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -198,14 +186,3 @@ footer {
   font-size: x-large;
   color: #4f94fc;
 }
-
-/*
-#email-text {
-}
-
-#github-text {
-}
-
-#blog-text {
-}
-*/
