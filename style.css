@@ -36,16 +36,7 @@ body::-webkit-scrollbar-track {
 }
 
 a {
-  color: black;
   text-decoration: none;
-}
-
-a:visited {
-  color: black;
-}
-
-a:hover {
-  color: #4f94fc;
 }
 
 /* header */
@@ -205,16 +196,54 @@ img {
   top: 1939px;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   background-color: #ffedff;
 }
 
+.mini-project__title {
+  margin-bottom: 50px;
+}
+
 .mini-project__title__text {
   font-size: xx-large;
   color: #f4a6f4;
   font-family: "SeoulNamsan";
+}
+
+.mini-project__content {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.mini-project__content__code-escape {
+}
+
+.mini-project__content__code-escape-link {
+  width: 250px;
+  height: 250px;
+  border-radius: 10%;
+  border: black 5px solid;
+  color: black;
+  text-decoration: none;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.mini-project__content__code-escape-link:visited {
+  color: black;
+}
+
+.mini-project__content__code-escape-link:hover {
+  color: #f4a6f4;
+  border: #f4a6f4 5px solid;
 }
 
 /* footer - contact */
@@ -229,6 +258,21 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.contact-link {
+  color: black;
+  text-decoration: none;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-link:visited {
+  color: black;
+}
+
+.contact-link:hover {
+  color: #4f94fc;
 }
 
 .contact__title {
