@@ -61,6 +61,11 @@ header {
 .menu {
   color: #f97807;
   font-size: x-large;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu:hover {
+  color: gray;
 }
 
 /* section - hello */
@@ -219,15 +224,13 @@ img {
   flex-direction: row;
 }
 
-.mini-project__content__code-escape {
-}
-
-.mini-project__content__code-escape-link {
-  width: 250px;
-  height: 250px;
+.mini-project__content__link {
+  margin: 0px 30px;
+  width: 230px;
+  height: 230px;
   border-radius: 10%;
-  border: black 5px solid;
-  color: black;
+  border: #f4a6f4 5px solid;
+  color: #f4a6f4;
   text-decoration: none;
   font-size: x-large;
   display: flex;
@@ -237,13 +240,13 @@ img {
   transition: all 0.2s ease-in-out;
 }
 
-.mini-project__content__code-escape-link:visited {
-  color: black;
+.mini-project__content__link:visited {
+  color: #f4a6f4;
 }
 
-.mini-project__content__code-escape-link:hover {
-  color: #f4a6f4;
-  border: #f4a6f4 5px solid;
+.mini-project__content__link:hover {
+  color: black;
+  border: black 5px solid;
 }
 
 /* footer - contact */
