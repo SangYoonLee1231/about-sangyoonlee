@@ -73,7 +73,7 @@ header {
 }
 
 /* section - hello */
-#hello {
+.hello {
   position: absolute;
   width: 100vw;
   height: 92vh;
@@ -89,24 +89,26 @@ header {
   animation: fade-hello-background 3s infinite;
 }
 
-.hello-message-item {
-  padding: 35px 0px;
+.hello__message {
+  padding: 25px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.hello-message-item-text {
+.hello__message__container {
+  margin: 35px 0px;
+}
+
+.hello__message__container__text {
   color: #f97807;
   font-size: 40px;
   font-family: "SeoulNamsan";
+  animation: fade-title 3s infinite;
 }
 
-#my-name {
-  font-size: 40px;
+.my-name {
   color: #5898f8;
-  font-family: "SeoulNamsan";
-}
-
-.all-text {
-  animation: fade-title 4s infinite;
 }
 
 @keyframes fade-title {
@@ -143,7 +145,7 @@ header {
 }
 
 /* section - about */
-#about {
+.about {
   position: absolute;
   width: 100vw;
   height: 92vh;
@@ -155,36 +157,36 @@ header {
   align-items: center;
 }
 
-#about-title-text {
+.about__title {
+  padding-bottom: 150px;
+}
+
+.about__title__text {
   font-size: 45px;
   color: #f97807;
   font-family: "SeoulNamsan";
 }
 
-#about-inside-container {
+.about__inside-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#about-title {
-  padding-bottom: 150px;
-}
-
-#profile-title {
+.profile-title {
   padding-right: 50px;
 }
 
-#profile-text {
+.profile-text {
   padding-right: 150px;
 }
 
-#profile-title p {
+.profile-title p {
   font-size: x-large;
   color: #f97807;
 }
 
-#profile-text p {
+.profile-text p {
   font-size: x-large;
   color: #4f94fc;
 }
@@ -194,13 +196,34 @@ img {
   border-radius: 10px;
 }
 
+/* section - mini-game */
+.mini-project {
+  position: absolute;
+  width: 100vw;
+  height: 92vh;
+  left: 0px;
+  top: 1939px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffedff;
+}
+
+.mini-project__title__text {
+  font-size: xx-large;
+  color: #f4a6f4;
+  font-family: "SeoulNamsan";
+}
+
 /* footer - contact */
 footer {
   position: absolute;
   width: 100vw;
   height: 75vh;
   left: 0px;
-  top: 1939px;
+  top: 2630px;
   background-color: #dfecff;
   display: flex;
   flex-direction: column;
@@ -208,12 +231,12 @@ footer {
   align-items: center;
 }
 
-#contact-title {
+.contact__title {
   padding: 30px 0px;
   margin-bottom: 20px;
 }
 
-#contact-title-text {
+.contact__title__text {
   font-size: xx-large;
   color: #4f94fc;
   font-family: "SeoulNamsan";
