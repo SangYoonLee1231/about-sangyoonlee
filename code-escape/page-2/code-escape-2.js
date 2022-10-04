@@ -41,7 +41,7 @@ setTimeout(() => {
   clearInterval(typingTimer);
 }, timeInterval * openingMessage.length);
 
-// CODE 1
+// CODE 2
 
 const startDiv = document.querySelector(".start-div");
 

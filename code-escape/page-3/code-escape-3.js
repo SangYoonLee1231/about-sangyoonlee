@@ -3,12 +3,12 @@ const root = document.querySelector(".root");
 // OPENING
 
 const openingDiv = document.querySelector(".opening-div");
-
+/*
 const openingMessage = `
-[ CODE ESCAPE - 2장. 커지는 의문 ]
+[ CODE ESCAPE - ?? ]
 \n\n.
 \n..
-\n.. ...끼..익
+\n.. ...
 \n\n자물쇠를 풀고 잠긴 문을 조심히 여니
 \n감당치 못할 만큼의 강렬한 빛이 동공을 통해 내 눈으로 들어왔다.  
 \n문 밖은 방금 내가 있던 곳과는 전혀 다른 공간이었다.\n\n
@@ -17,6 +17,13 @@ const openingMessage = `
 역시나 문은 자물쇠로 단단히 잠겨있어 열리지 않았다.\n\n
 그리고..\n
 또 하나의 새로운 문제가 나를 기다리고 있었다.\n\n\n`;
+*/
+
+const openingMessage = `
+\n\n아직 다 완성을 하지 못했습니다.
+\n조금만 기다려 주신다면 빠르게 마저 완성하도록 하겠습니다.
+\n감사합니다. :)
+`;
 
 const timeInterval = 80;
 
@@ -41,7 +48,9 @@ setTimeout(() => {
   clearInterval(typingTimer);
 }, timeInterval * openingMessage.length);
 
-// CODE 1
+// CODE 3
+
+/*
 
 const startDiv = document.querySelector(".start-div");
 
@@ -92,3 +101,5 @@ function judgeAnswer(event) {
     `;
   }
 }
+
+*/
