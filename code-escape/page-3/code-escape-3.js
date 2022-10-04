@@ -5,7 +5,7 @@ const root = document.querySelector(".root");
 const openingDiv = document.querySelector(".opening-div");
 /*
 const openingMessage = `
-[ CODE ESCAPE - ?? ]
+[ CODE ESCAPE - 3장.  ]
 \n\n.
 \n..
 \n.. ...
@@ -20,9 +20,9 @@ const openingMessage = `
 */
 
 const openingMessage = `
-\n\n아직 다 완성을 하지 못했습니다.
-\n조금만 기다려 주신다면 빠르게 마저 완성하도록 하겠습니다.
-\n지금까지 플레이 해주셔서 감사드립니다. :)
+\n\n아직 다 만들지 못했습니다.
+\n조금만 기다려 주신다면 빠르게 마저 완성해보도록 하겠습니다.
+\n\n지금까지 플레이 해주셔서 감사드립니다. ( _ _ )
 `;
 
 const timeInterval = 80;
@@ -97,7 +97,7 @@ function judgeAnswer(event) {
     judgeDiv.innerHTML = `
     <br/>
     <p>틀렸습니다. 다시 한 번 생각해보세요.</p>
-    <p>힌트 : → = E 입니다.</p>
+    <p>힌트 : 핵심 키워드를 다른 나라의 언어로 바꿔보시길 바랍니다.</p>
     `;
   }
 }
