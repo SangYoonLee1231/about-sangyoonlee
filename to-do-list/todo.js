@@ -11,12 +11,19 @@ function addItem(event) {
     toDo: "",
   };
 
+  const targetValue = event.target[0].value;
+
   event.preventDefault();
-  id++;
-  newItem.id = id;
-  newItem.toDo = event.target[0].value;
-  list.push(newItem);
-  showList();
+
+  if (targetValue !== "") {
+    id++;
+    newItem.id = id;
+    newItem.toDo = targetValue;
+    list.push(newItem);
+    showList();
+  } else {
+    alert("할 일을 입력해주세요.");
+  }
 }
 
 function deleteItem(event) {

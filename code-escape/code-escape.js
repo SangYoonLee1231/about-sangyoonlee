@@ -1,69 +1,83 @@
 const root = document.querySelector(".root");
 
-function showMessage(div, message) {
-  let index = 0;
-
-  let typing = () => {
-    console.log(message.length);
-    if (message[index] === "\n") {
-      div.innerHTML += "<br/>";
-    } else {
-      div.innerHTML += message[index];
-    }
-    index += 1;
-  };
-  if (index > message.length) {
-    return;
-  }
-
-  let typingTimper = setInterval(typing, 50);
-  setTimeout(() => {
-    clearInterval(typingTimer);
-  }, 50 * message.length);
-}
-
-function sleep(ms) {
-  const loopTime = Date.now() + ms;
-  while (Date.now() < loopTime) {}
-}
-
 // OPENING
 
 const openingDiv = document.querySelector(".opening-div");
 
-const openingMessage = `\n여느 때와 마찬가지로 나는 내 방에서 분명 잠이 들었을 텐데..
-\n지금 나의 눈앞에 보이는 낯선 풍경은 어째서인가\n현실과는 다른 괴리감이 느껴진다.`;
+const openingMessage = `
+[ CODE ESCAPE ]
+\n\n.
+\n..
+\n.. ...?
+\n\n여느 때와 마찬가지로 나는 내 방에서 분명 잠이 들었을 텐데..
+\n지금 나의 눈앞에 보이는 낯선 풍경은 어째서인지
+\n현실과는 다른 괴리감이 느껴진다.\n\n
+이 곳은 어디인가.\n
+상황을 파악하기 위해 주위를 둘러보니 저 너머에 문 하나가 보인다.\n
+하지만 문은 자물쇠로 단단히 잠겨있어 열리지 않는다.\n\n
+혹시 이건 방탈출 게임인가..? 그럼 뭔가 문을 열 단서를 찾아야 하는 건가?\n
+의문과 두려움을 가득 안은 채 나는 내 주위를 둘러보기 시작했다.\n\n
+다행이도 문을 열 만한 단서를 찾는 데에는 그리 오랜 시간이 걸리지 않았다.\n\n\n`;
 
-console.log(openingDiv);
+let index = 0;
 
-showMessage(openingDiv, openingMessage);
+let typing = () => {
+  if (openingMessage[index] === "\n") {
+    openingDiv.innerHTML += "<br/>";
+  } else {
+    openingDiv.innerHTML += openingMessage[index];
+  }
+
+  index += 1;
+
+  if (index > openingMessage.length) {
+    return;
+  }
+};
+
+let typingTimer = setInterval(typing, 90);
+setTimeout(() => {
+  clearInterval(typingTimer);
+}, 90 * openingMessage.length);
 
 // CODE 1
 
 const startDiv = document.querySelector(".start-div");
 
-const startMessage = `
-\n코드 이스케이프 미니 게임에 오신 여러분을 환영합니다.\n
-주어진 수수께기를 풀고 올바른 코드(암호)를 입력해 이 곳을 탈출하세요.\n`;
-
-//sleep(2000);
-
-console.log(startDiv);
-
-showMessage(startDiv, startMessage);
-
 function showCode(message, codeNum) {
   const codeDiv = document.createElement("div");
 
   const code = `
-    <div class="code${codeNum} fade-in">
+    <div class="code${codeNum}">
       <p>${message}</p>
       <img src="code_img/code-${codeNum}.png" width="550"></img>
+      <form>
+        <input type="text" placeholder="숫자 3자리 암호"></input>
+        <button onclick="judgeAnswer(event)">확인</button>
+      </form>
     </div>
   `;
 
   codeDiv.innerHTML = code;
-  root.appendChild(codeDiv);
+  startDiv.className = "fade-in";
+  startDiv.appendChild(codeDiv);
 }
 
-//showCode("", 1);
+setTimeout(() => {
+  showCode("", 1);
+}, 90 * (openingMessage.length + 6));
+
+// Right or Wrong
+
+const judgeDiv = document.querySelector(".judge-div");
+
+function judgeAnswer(event) {
+  event.preventDefault();
+
+  const targetValue = event.target[0].value;
+
+  if (targetValue === "257") {
+    judgeDiv.innerHTML = ``;
+  } else {
+  }
+}

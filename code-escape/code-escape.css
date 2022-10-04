@@ -1,4 +1,30 @@
+/* Basic */
+@font-face {
+  font-family: "SeoulNamsanM";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SeoulNamsan";
+  font-weight: 800;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
 body {
+  font-family: "SeoulNamsanM";
   background-color: black;
 }
 
@@ -8,22 +34,76 @@ body {
   align-items: center;
 }
 
-.start-div {
+.opening-div {
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.fade-in {
-  animation: fade-in 2s initial;
+.start-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes fade-in {
+.fade-in {
+  animation: fadein 3s;
+}
+
+@keyframes fadein {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
+}
+
+img {
+  margin: 30px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  color: black;
+  border: none;
+  border-bottom: 0.5px solid gray;
+  border-radius: 5px;
+  height: 35px;
+  width: 200px;
+  text-align: center;
+  margin: 0px 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+  color: black;
+  opacity: 0.5;
+}
+
+input:focus {
+  border-color: 10px solid white;
+  outline: white;
+}
+
+button {
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  width: 60px;
+  height: 35px;
+  font-size: medium;
+  margin: 0px 5px;
+}
+
+.margin-div {
+  height: 400px;
 }

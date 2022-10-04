@@ -55,11 +55,23 @@ p {
 
 .todo-title__input {
   border: none;
-  border-bottom: 1px solid #f4a6f4;
+  border-bottom: 0.5px solid #f4a6f4;
   border-radius: 5px;
   height: 35px;
+  width: 200px;
   text-align: center;
   margin: 0px 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.todo-title__input::placeholder {
+  color: #f4a6f4;
+  opacity: 0.5;
+}
+
+.todo-title__input:focus {
+  border-color: 10px solid #f4a6f4;
+  outline: #f4a6f4;
 }
 
 .todo-title__btn {
