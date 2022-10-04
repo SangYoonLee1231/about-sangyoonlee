@@ -107,3 +107,22 @@ button {
 .margin-div {
   height: 400px;
 }
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2000px;
+  height: 20px;
+  text-decoration: none;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+.judge-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
