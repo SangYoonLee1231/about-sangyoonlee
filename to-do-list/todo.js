@@ -24,6 +24,8 @@ function addItem(event) {
   } else {
     alert("할 일을 입력해주세요.");
   }
+
+  event.target[0].value = "";
 }
 
 function deleteItem(event) {

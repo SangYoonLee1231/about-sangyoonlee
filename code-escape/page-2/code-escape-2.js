@@ -5,21 +5,20 @@ const root = document.querySelector(".root");
 const openingDiv = document.querySelector(".opening-div");
 
 const openingMessage = `
-[ CODE ESCAPE - 1장. 모든 것의 시작 ]
+[ CODE ESCAPE - 2장. 커지는 의문 ]
 \n\n.
 \n..
-\n.. ...?
-\n\n여느 때와 마찬가지로 나는 내 방에서 분명 잠이 들었을 텐데..
-\n지금 나의 눈앞에 보이는 낯선 풍경은 어째서인지
-\n현실과는 다른 괴리감이 느껴진다.\n\n
-이 곳은 어디인가.\n
-상황을 파악하기 위해 주위를 둘러보니 저 너머에 문 하나가 보인다.\n
-하지만 문은 자물쇠로 단단히 잠겨있어 열리지 않았다.\n\n
-혹시 이건 방탈출 게임인가..? 그럼 뭔가 문을 열 단서를 찾아야 하는 건가?\n
-의문과 두려움을 가득 안은 채 나는 내 주위를 둘러보기 시작했다.\n\n
-다행이도 문을 열 만한 단서를 찾는 데에는 그리 오랜 시간이 걸리지 않았다.\n\n\n`;
+\n.. ...끼..익
+\n\n자물쇠를 풀고 잠긴 문을 조심히 여니
+\n감당치 못할 만큼의 강렬한 빛이 동공을 통해 내 눈으로 들어왔다.  
+\n문 밖은 방금 내가 있던 곳과는 전혀 다른 공간이었다.\n\n
+여기는 정말 어떤 곳일까.\n
+다시 한 번 주위를 둘러보니 저 너머에 또 하나의 문이 보였다.\n
+역시나 문은 자물쇠로 단단히 잠겨있어 열리지 않았다.\n\n
+그리고..\n
+또 하나의 새로운 문제가 나를 기다리고 있었다.\n\n\n`;
 
-const timeInterval = 10;
+const timeInterval = 80;
 
 let index = 0;
 
@@ -53,9 +52,9 @@ function showCode(message, codeNum) {
     <div class="code${codeNum}">
       <p>${message}</p>
       <br/>
-      <img src="code_img/code-${codeNum}.png" width="550"></img>
+      <img src="../code_img/code-${codeNum}.png" width="550"></img>
       <form>
-        <input type="text" placeholder="숫자 3자리 암호" maxlength="3"></input>
+        <input type="text" placeholder="영어 6자리 암호" maxlength="6"></input>
         <button onclick="judgeAnswer(event)">확인</button>
       </form>
     </div>
@@ -67,7 +66,7 @@ function showCode(message, codeNum) {
 }
 
 setTimeout(() => {
-  showCode("", 1);
+  showCode("", 2);
 }, timeInterval * (openingMessage.length + 6));
 
 // Right or Wrong
@@ -79,17 +78,17 @@ function judgeAnswer(event) {
 
   const targetValue = event.target.parentElement[0].value;
 
-  if (targetValue === "257") {
+  if (targetValue.toUpperCase() === "ANSWER") {
     judgeDiv.innerHTML = `
-    <br/>
+    <br/><br/>
     <p>정답입니다!</p>
-    <a href="code-escape-2.html">문을 열고 들어간다. (클릭해주세요)</a>
+    <a href="../page-3/code-escape-3.html">문을 열고 들어간다. (클릭해주세요)</a>
     `;
   } else {
     judgeDiv.innerHTML = `
     <br/>
     <p>틀렸습니다. 다시 한 번 생각해보세요.</p>
-    <p>힌트 : 그림의 거울은 빛을 직각으로 반사합니다.</p>
+    <p>힌트 : → = E 입니다.</p>
     `;
   }
 }

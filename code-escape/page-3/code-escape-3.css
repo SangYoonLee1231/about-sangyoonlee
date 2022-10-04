@@ -25,42 +25,57 @@
 
 body {
   font-family: "SeoulNamsanM";
-  background-color: #ffedff;
+  background-color: white;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opening-div {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+.fade-in {
+  animation: fadein 3s;
 }
 
-body::-webkit-scrollbar-track {
-  background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-/* todo-tile */
-.todo-title {
+img {
+  margin: 30px;
+}
+
+form {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-p {
-  font-size: xx-large;
-  color: #f4a6f4;
-  font-family: "SeoulNamsan";
-}
-
-h4 {
-  color: #f4a6f4;
-  font-family: "SeoulNamsan";
-}
-
-.todo-title__input {
+input {
+  background-color: white;
+  color: black;
   border: none;
-  border-bottom: 0.5px solid #f4a6f4;
+  border-bottom: 0.5px solid gray;
   border-radius: 5px;
   height: 35px;
   width: 200px;
@@ -69,46 +84,45 @@ h4 {
   transition: all 0.3s ease-in-out;
 }
 
-.todo-title__input::placeholder {
-  color: #f4a6f4;
-  opacity: 0.5;
+input::placeholder {
+  color: black;
 }
 
-.todo-title__input:focus {
-  border-color: 10px solid #f4a6f4;
-  outline: #f4a6f4;
+input:focus {
+  border-color: 10px solid black;
+  outline: black;
 }
 
-.todo-title__btn {
-  border: none;
+button {
+  border: 1px solid black;
   border-radius: 5px;
-  background-color: #f4a6f4;
-  color: white;
+  background-color: white;
+  color: black;
   width: 60px;
   height: 35px;
   font-size: medium;
   margin: 0px 5px;
 }
 
-/* todo-list */
-.todo-list {
-  margin: 10px;
+.margin-div {
+  height: 400px;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 30px;
+  text-decoration: none;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+
+.judge-div {
   display: flex;
   flex-direction: column;
-}
-
-li {
-  margin: 5px;
-  font-family: "SeoulNamsanM";
-}
-
-.delete-btn {
-  border: none;
-  border-radius: 5px;
-  background-color: #f4a6f4;
-  color: white;
-  width: 45px;
-  height: 25px;
-  font-size: small;
-  margin: 5px;
+  align-items: center;
+  color: black;
 }
