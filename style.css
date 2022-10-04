@@ -146,7 +146,7 @@ header {
   width: 100vw;
   height: 92vh;
   left: 0px;
-  top: 852px;
+  top: 1002px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -198,7 +198,7 @@ img {
   width: 100vw;
   height: 92vh;
   left: 0px;
-  top: 1689px;
+  top: 1939px;
 
   display: flex;
   flex-direction: column;
@@ -255,7 +255,7 @@ footer {
   width: 100vw;
   height: 75vh;
   left: 0px;
-  top: 2380px;
+  top: 2630px;
   background-color: #dfecff;
   display: flex;
   flex-direction: column;
