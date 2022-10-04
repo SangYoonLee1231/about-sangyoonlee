@@ -5,22 +5,29 @@ const list = [];
 
 let id = 0;
 
-const item = {
-  id: 0,
-  toDo: "",
-};
-
 function addItem(event) {
+  const newItem = {
+    id: 0,
+    toDo: "",
+  };
+
   event.preventDefault();
   id++;
-  item.id = id;
-  item.toDo = event.target[0].value;
-  list.push(item);
+  newItem.id = id;
+  newItem.toDo = event.target[0].value;
+  list.push(newItem);
   showList();
 }
 
 function deleteItem(event) {
-  console.log(event);
+  const targetId = Number(event.target.parentElement.id);
+
+  for (let i = 0; i < list.length; i++) {
+    if (list[i].id === targetId) {
+      list.splice(i, 1);
+    }
+  }
+
   showList();
 }
 
@@ -35,9 +42,9 @@ function showList() {
 
   for (let i = 0; i < list.length; i++) {
     newList.push(`
-      <li>
+      <li id="${list[i].id}">
         <span>${list[i].toDo}</span>
-        <button onclick="deleteItem()">DELETE</button>
+        <button onclick="deleteItem(event)">DELETE</button>
       </li>
     `);
   }
