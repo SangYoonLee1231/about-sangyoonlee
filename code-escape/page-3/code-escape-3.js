@@ -22,7 +22,7 @@ const openingMessage = `
 const openingMessage = `
 \n\n아직 다 완성을 하지 못했습니다.
 \n조금만 기다려 주신다면 빠르게 마저 완성하도록 하겠습니다.
-\n감사합니다. :)
+\n지금까지 플레이 해주셔서 감사드립니다. :)
 `;
 
 const timeInterval = 80;
