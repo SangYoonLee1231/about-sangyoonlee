@@ -19,7 +19,7 @@ const openingMessage = `
 의문과 두려움을 가득 안은 채 나는 내 주위를 둘러보기 시작했다.\n\n
 다행이도 문을 열 만한 단서를 찾는 데에는 그리 오랜 시간이 걸리지 않았다.\n\n\n`;
 
-const timeInterval = 90;
+const timeInterval = 10;
 
 let index = 0;
 
@@ -52,6 +52,7 @@ function showCode(message, codeNum) {
   const code = `
     <div class="code${codeNum}">
       <p>${message}</p>
+      <br/>
       <img src="code_img/code-${codeNum}.png" width="550"></img>
       <form>
         <input type="text" placeholder="숫자 3자리 암호" maxlength="3"></input>
@@ -82,7 +83,7 @@ function judgeAnswer(event) {
     judgeDiv.innerHTML = `
     <br/>
     <p>정답입니다!</p>
-    <a href="code-escape-2.html">문을 열고 들어간다.</a>
+    <a href="code-escape-2.html">문을 열고 들어간다. (클릭해주세요)</a>
     `;
   } else {
     judgeDiv.innerHTML = `
