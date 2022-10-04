@@ -1,0 +1,96 @@
+/* Basic */
+@font-face {
+  font-family: "SeoulNamsanM";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SeoulNamsan";
+  font-weight: 800;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/seoulnamsan/SeoulNamsanExtraBold.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+body {
+  font-family: "SeoulNamsanM";
+  background-color: #ffedff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
+}
+
+/* todo-tile */
+.todo-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-size: xx-large;
+  color: #f4a6f4;
+  font-family: "SeoulNamsan";
+}
+
+.todo-title__input {
+  border: none;
+  border-bottom: 1px solid #f4a6f4;
+  border-radius: 5px;
+  height: 35px;
+  text-align: center;
+  margin: 0px 5px;
+}
+
+.todo-title__btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #f4a6f4;
+  color: white;
+  width: 55px;
+  height: 35px;
+  font-size: medium;
+  margin: 0px 5px;
+}
+
+/* todo-list */
+.todo-list {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  margin: 5px;
+}
+
+.delete-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #f4a6f4;
+  color: white;
+  width: 35px;
+  height: 25px;
+  font-size: small;
+  margin: 5px;
+}

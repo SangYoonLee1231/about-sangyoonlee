@@ -44,7 +44,7 @@ function showList() {
     newList.push(`
       <li id="${list[i].id}">
         <span>${list[i].toDo}</span>
-        <button onclick="deleteItem(event)">DELETE</button>
+        <button class="delete-btn" onclick="deleteItem(event)">완료</button>
       </li>
     `);
   }
