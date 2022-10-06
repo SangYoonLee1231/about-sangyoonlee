@@ -5,16 +5,16 @@ const root = document.querySelector(".root");
 const openingDiv = document.querySelector(".opening-div");
 
 const openingMessage = `
-[ CODE ESCAPE - 4장. 데자뷔 ]
-\n\n
-\n< 데자뷔 (Deja Vu) >
-\n'최초의 경험임에도 불구하고
-\n이미 본 적이 있거나 경험한 적이 있다는 이상한 느낌이나 환상'
-\n\n문을 지나갈 때마다 반복되는 빛과 어둠.
-\n그리고 자물쇠가 걸린 문과 새롭게 등장하는 문제들.
-\n\n매우 낯설고 불편해야 할 이 상황이 왜 이렇게나 익숙하게 느껴질까.
-\n\n마치 매일 밥 먹듯이 이 짓을 해온 것처럼..
-\n\n\n`;
+[ CODE ESCAPE - 5장. 가까워진 진실 ]
+\n\n < 블랙어웃 (Blackout) >
+\n'눈 앞이 캄캄해지는 것을 뜻하는 영어단어.
+\n정신 잃음, 등화관제, 정전, 암전, 기절, 필름 끊김 등 여러가지 상황에 쓰인다.'
+\n\n..기억이 나지 않는다.
+\n내 방에서 잠이 들었던 것 외에는 아무 것도 기억이 나지 않는다.
+\n\n혼란스럽다.
+\n내 이름조차 기억이 나지 않는다.
+\n나는 누구이며 왜 이 곳에 있는 거지..?
+\n\n우선 내 눈 앞에 있는 또 하나의 문부터 열고 나서 더 생각헤보는 것이 좋겠다.\n\n\n`;
 
 const timeInterval = 80;
 
@@ -39,7 +39,7 @@ setTimeout(() => {
   clearInterval(typingTimer);
 }, timeInterval * openingMessage.length);
 
-// CODE 1
+// CODE 3
 
 const startDiv = document.querySelector(".start-div");
 
@@ -52,7 +52,7 @@ function showCode(message, codeNum) {
       <br/>
       <img src="../code_img/code-${codeNum}.png" width="550"></img>
       <form>
-        <input type="text" placeholder="숫자 암호"></input>
+        <input type="text" placeholder="3자리 암호" maxlength="6"></input>
         <button onclick="judgeAnswer(event)">확인</button>
       </form>
     </div>
@@ -64,7 +64,7 @@ function showCode(message, codeNum) {
 }
 
 setTimeout(() => {
-  showCode("", 4);
+  showCode("", 5);
 }, timeInterval * (openingMessage.length + 6));
 
 // Right or Wrong
@@ -76,17 +76,17 @@ function judgeAnswer(event) {
 
   const targetValue = event.target.parentElement[0].value;
 
-  if (targetValue === "8161028") {
+  if (targetValue.toUpperCase() === "FINE") {
     judgeDiv.innerHTML = `
     <br/><br/>
     <p>정답입니다!</p>
-    <a href="../page-5/code-escape-5.html">문을 열고 들어간다. (클릭해주세요)</a>
+    <a href="../page-6/code-escape-6.html">문을 열고 들어간다. (클릭해주세요)</a>
     `;
   } else {
     judgeDiv.innerHTML = `
     <br/>
     <p>틀렸습니다. 다시 한 번 생각해보세요.</p>
-    <p>힌트 : 사칙연산 만으로 해결할 수 있는 문제입니다. 수보다 숫자에 주목해보세요.</p>
+    <p>힌트 : 핵심 키워드를 다른 나라의 언어로 바꿔보시길 바랍니다.</p>
     `;
   }
 }
