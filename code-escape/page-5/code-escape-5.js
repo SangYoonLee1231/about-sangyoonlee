@@ -6,15 +6,16 @@ const openingDiv = document.querySelector(".opening-div");
 
 const openingMessage = `
 [ CODE ESCAPE - 5장. 가까워진 진실 ]
-\n\n < 블랙어웃 (Blackout) >
-\n'눈 앞이 캄캄해지는 것을 뜻하는 영어단어.
-\n정신 잃음, 등화관제, 정전, 암전, 기절, 필름 끊김 등 여러가지 상황에 쓰인다.'
-\n\n..기억이 나지 않는다.
-\n내 방에서 잠이 들었던 것 외에는 아무 것도 기억이 나지 않는다.
-\n\n혼란스럽다.
-\n내 이름조차 기억이 나지 않는다.
-\n나는 누구이며 왜 이 곳에 있는 거지..?
-\n\n우선 내 눈 앞에 있는 또 하나의 문부터 열고 나서 더 생각헤보는 것이 좋겠다.\n\n\n`;
+\n\n
+\n
+\n
+\n\n
+\n
+\n\n
+\n
+\n
+\n\n
+\n\n\n`;
 
 const timeInterval = 80;
 
