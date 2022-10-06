@@ -5,19 +5,16 @@ const root = document.querySelector(".root");
 const openingDiv = document.querySelector(".opening-div");
 
 const openingMessage = `
-[ CODE ESCAPE - 4장. 데자뷰 ]
-\n\n.
-\n..
-\n.. ...?
-\n\n여느 때와 마찬가지로 나는 내 방에서 분명 잠이 들었을 텐데..
-\n지금 나의 눈앞에 보이는 낯선 풍경은 어째서인지
-\n현실과는 전혀 다른 괴리감이 느껴진다.\n\n
-이 곳은 어디인가.\n
-상황을 파악하기 위해 주위를 둘러보니 저 너머에 문 하나가 보였다.\n
-하지만 문은 자물쇠로 단단히 잠겨있어 열리지 않았다.\n\n
-혹시 이건 방탈출 게임인가..? 그럼 뭔가 문을 열 단서를 찾아야 하는 건가?\n
-의문과 두려움을 가득 안은 채 나는 내 주위를 둘러보기 시작했다.\n\n
-다행이도 문을 열 만한 단서를 찾는 데에는 그리 오랜 시간이 걸리지 않았다.\n\n\n`;
+[ CODE ESCAPE - 4장. 데자뷔 ]
+\n\n
+\n< 데자뷔 (Deja Vu) >
+\n'최초의 경험임에도 불구하고
+\n이미 본 적이 있거나 경험한 적이 있다는 이상한 느낌이나 환상'
+\n\n문을 지나갈 때마다 반복되는 빛과 어둠.
+\n그리고 자물쇠가 걸린 문과 새롭게 등장하는 문제들.
+\n\n매우 낯설고 불편해야 할 이 상황이 왜 이렇게나 익숙하게 느껴질까.
+\n\n마치 매일 밥 먹듯이 이 짓을 해온 것처럼..
+\n\n\n`;
 
 const timeInterval = 80;
 
@@ -55,7 +52,7 @@ function showCode(message, codeNum) {
       <br/>
       <img src="../code_img/code-${codeNum}.png" width="550"></img>
       <form>
-        <input type="text" placeholder="숫자 3자리 암호" maxlength="3"></input>
+        <input type="text" placeholder="숫자 암호"></input>
         <button onclick="judgeAnswer(event)">확인</button>
       </form>
     </div>
@@ -67,7 +64,7 @@ function showCode(message, codeNum) {
 }
 
 setTimeout(() => {
-  showCode("", 1);
+  showCode("", 4);
 }, timeInterval * (openingMessage.length + 6));
 
 // Right or Wrong
@@ -83,13 +80,13 @@ function judgeAnswer(event) {
     judgeDiv.innerHTML = `
     <br/><br/>
     <p>정답입니다!</p>
-    <a href="../page-2/code-escape-2.html">문을 열고 들어간다. (클릭해주세요)</a>
+    <a href="../page-5/code-escape-5.html">문을 열고 들어간다. (클릭해주세요)</a>
     `;
   } else {
     judgeDiv.innerHTML = `
     <br/>
     <p>틀렸습니다. 다시 한 번 생각해보세요.</p>
-    <p>힌트 : 그림의 거울은 빛을 직각으로 반사합니다.</p>
+    <p>힌트 : 사칙연산 만으로 해결할 수 있는 문제입니다. 수보다 숫자에 주목해보세요.</p>
     `;
   }
 }
