@@ -5,16 +5,19 @@ const root = document.querySelector(".root");
 const openingDiv = document.querySelector(".opening-div");
 
 const openingMessage = `
-[ CODE ESCAPE - 3장. 블랙 아웃 ]
-\n\n < 블랙어웃 (Blackout) >
-\n'눈 앞이 캄캄해지는 것을 뜻하는 영어단어.
-\n정신 잃음, 등화관제, 정전, 암전, 기절, 필름 끊김 등 여러가지 상황에 쓰인다.'
-\n\n..기억이 나지 않는다.
-\n내 방에서 잠이 들었던 것 외에는 아무 것도 기억이 나지 않는다.
-\n\n혼란스럽다.
-\n내 이름조차 기억이 나지 않는다.
-\n나는 누구이며 왜 이 곳에 있는 거지..?
-\n\n우선 내 눈 앞에 있는 또 하나의 문부터 열고 나서 더 생각헤보는 것이 좋겠다.\n\n\n`;
+[ CODE ESCAPE - 4장. 데자뷰 ]
+\n\n.
+\n..
+\n.. ...?
+\n\n여느 때와 마찬가지로 나는 내 방에서 분명 잠이 들었을 텐데..
+\n지금 나의 눈앞에 보이는 낯선 풍경은 어째서인지
+\n현실과는 전혀 다른 괴리감이 느껴진다.\n\n
+이 곳은 어디인가.\n
+상황을 파악하기 위해 주위를 둘러보니 저 너머에 문 하나가 보였다.\n
+하지만 문은 자물쇠로 단단히 잠겨있어 열리지 않았다.\n\n
+혹시 이건 방탈출 게임인가..? 그럼 뭔가 문을 열 단서를 찾아야 하는 건가?\n
+의문과 두려움을 가득 안은 채 나는 내 주위를 둘러보기 시작했다.\n\n
+다행이도 문을 열 만한 단서를 찾는 데에는 그리 오랜 시간이 걸리지 않았다.\n\n\n`;
 
 const timeInterval = 80;
 
@@ -39,7 +42,7 @@ setTimeout(() => {
   clearInterval(typingTimer);
 }, timeInterval * openingMessage.length);
 
-// CODE 3
+// CODE 1
 
 const startDiv = document.querySelector(".start-div");
 
@@ -52,7 +55,7 @@ function showCode(message, codeNum) {
       <br/>
       <img src="../code_img/code-${codeNum}.png" width="550"></img>
       <form>
-        <input type="text" placeholder="3자리 암호" maxlength="6"></input>
+        <input type="text" placeholder="숫자 3자리 암호" maxlength="3"></input>
         <button onclick="judgeAnswer(event)">확인</button>
       </form>
     </div>
@@ -64,7 +67,7 @@ function showCode(message, codeNum) {
 }
 
 setTimeout(() => {
-  showCode("", 3);
+  showCode("", 1);
 }, timeInterval * (openingMessage.length + 6));
 
 // Right or Wrong
@@ -76,17 +79,17 @@ function judgeAnswer(event) {
 
   const targetValue = event.target.parentElement[0].value;
 
-  if (targetValue.toUpperCase() === "ICE") {
+  if (targetValue === "257") {
     judgeDiv.innerHTML = `
     <br/><br/>
     <p>정답입니다!</p>
-    <a href="../page-4/code-escape-4.html">문을 열고 들어간다. (클릭해주세요)</a>
+    <a href="../page-2/code-escape-2.html">문을 열고 들어간다. (클릭해주세요)</a>
     `;
   } else {
     judgeDiv.innerHTML = `
     <br/>
     <p>틀렸습니다. 다시 한 번 생각해보세요.</p>
-    <p>힌트 : 핵심 키워드를 다른 나라의 언어로 바꿔보시길 바랍니다.</p>
+    <p>힌트 : 그림의 거울은 빛을 직각으로 반사합니다.</p>
     `;
   }
 }
