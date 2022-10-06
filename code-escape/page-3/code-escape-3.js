@@ -3,27 +3,13 @@ const root = document.querySelector(".root");
 // OPENING
 
 const openingDiv = document.querySelector(".opening-div");
-/*
-const openingMessage = `
-[ CODE ESCAPE - 3장.  ]
-\n\n.
-\n..
-\n.. ...
-\n\n자물쇠를 풀고 잠긴 문을 조심히 여니
-\n감당치 못할 만큼의 강렬한 빛이 동공을 통해 내 눈으로 들어왔다.  
-\n문 밖은 방금 내가 있던 곳과는 전혀 다른 공간이었다.\n\n
-여기는 정말 어떤 곳일까.\n
-다시 한 번 주위를 둘러보니 저 너머에 또 하나의 문이 보였다.\n
-역시나 문은 자물쇠로 단단히 잠겨있어 열리지 않았다.\n\n
-그리고..\n
-또 하나의 새로운 문제가 나를 기다리고 있었다.\n\n\n`;
-*/
 
 const openingMessage = `
-\n\n아직 다 만들지 못했습니다.
-\n조금만 기다려 주신다면 빠르게 마저 완성해보도록 하겠습니다.
-\n\n지금까지 플레이 해주셔서 감사드립니다. ( _ _ )
-`;
+[ CODE ESCAPE - 3장. 블랙 아웃 ]
+\n\n < 블랙어웃 (Blackout) >
+\n'눈 앞이 캄캄해지는 것을 뜻하는 영어단어.
+\n정신 잃음, 등화관제, 정전, 암전, 기절, 필름 끊김 등 여러가지 상황에 쓰인다.'
+\n\n\n`;
 
 const timeInterval = 80;
 
@@ -50,8 +36,6 @@ setTimeout(() => {
 
 // CODE 3
 
-/*
-
 const startDiv = document.querySelector(".start-div");
 
 function showCode(message, codeNum) {
@@ -63,7 +47,7 @@ function showCode(message, codeNum) {
       <br/>
       <img src="../code_img/code-${codeNum}.png" width="550"></img>
       <form>
-        <input type="text" placeholder="영어 6자리 암호" maxlength="6"></input>
+        <input type="text" placeholder="3자리 암호" maxlength="6"></input>
         <button onclick="judgeAnswer(event)">확인</button>
       </form>
     </div>
@@ -75,7 +59,7 @@ function showCode(message, codeNum) {
 }
 
 setTimeout(() => {
-  showCode("", 2);
+  showCode("", 3);
 }, timeInterval * (openingMessage.length + 6));
 
 // Right or Wrong
@@ -87,7 +71,7 @@ function judgeAnswer(event) {
 
   const targetValue = event.target.parentElement[0].value;
 
-  if (targetValue.toUpperCase() === "ANSWER") {
+  if (targetValue.toUpperCase() === "ICE") {
     judgeDiv.innerHTML = `
     <br/><br/>
     <p>정답입니다!</p>
@@ -101,5 +85,3 @@ function judgeAnswer(event) {
     `;
   }
 }
-
-*/
