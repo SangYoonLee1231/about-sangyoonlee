@@ -53,7 +53,7 @@ function showCode(message, codeNum) {
       <br/>
       <img src="../code_img/code-${codeNum}.png" width="550"></img>
       <form>
-        <input type="text" placeholder="3자리 암호" maxlength="6"></input>
+        <input type="text" placeholder="4자리 암호" maxlength="4"></input>
         <button onclick="judgeAnswer(event)">확인</button>
       </form>
     </div>
@@ -87,7 +87,7 @@ function judgeAnswer(event) {
     judgeDiv.innerHTML = `
     <br/>
     <p>틀렸습니다. 다시 한 번 생각해보세요.</p>
-    <p>힌트 : 핵심 키워드를 다른 나라의 언어로 바꿔보시길 바랍니다.</p>
+    <p>힌트 : 네모 칸을 채우셔야 합니다. [가],[나],[다] 세 후보를 각각 세 글자로 바꿔보세요.</p>
     `;
   }
 }
