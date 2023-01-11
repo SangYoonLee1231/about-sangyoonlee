@@ -19,7 +19,7 @@ const openingMessage = `
 의문과 두려움을 가득 안은 채 나는 내 주위를 둘러보기 시작했다.\n\n
 다행이도 문을 열 만한 단서를 찾는 데에는 그리 오랜 시간이 걸리지 않았다.\n\n\n`;
 
-const timeInterval = 80;
+const timeInterval = 50;
 
 let index = 0;
 

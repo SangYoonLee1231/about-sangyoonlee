@@ -17,7 +17,7 @@ const openingMessage = `
 \n\n
 \n\n\n`;
 
-const timeInterval = 80;
+const timeInterval = 50;
 
 let index = 0;
 
@@ -40,7 +40,7 @@ setTimeout(() => {
   clearInterval(typingTimer);
 }, timeInterval * openingMessage.length);
 
-// CODE 3
+// CODE 5
 
 const startDiv = document.querySelector(".start-div");
 
@@ -81,7 +81,7 @@ function judgeAnswer(event) {
     judgeDiv.innerHTML = `
     <br/><br/>
     <p>정답입니다!</p>
-    <a href="../page-6/code-escape-6.html">문을 열고 들어간다. (클릭해주세요)</a>
+    <p>모두 클리어하셨습니다. 플레이 해주셔서 감사드립니다!</p>
     `;
   } else {
     judgeDiv.innerHTML = `

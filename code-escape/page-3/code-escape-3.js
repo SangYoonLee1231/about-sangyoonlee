@@ -16,7 +16,7 @@ const openingMessage = `
 \n나는 누구이며 왜 이 곳에 있는 거지..?
 \n\n우선 내 눈 앞에 있는 또 하나의 문부터 열고 나서 더 생각헤보는 것이 좋겠다.\n\n\n`;
 
-const timeInterval = 80;
+const timeInterval = 50;
 
 let index = 0;
 

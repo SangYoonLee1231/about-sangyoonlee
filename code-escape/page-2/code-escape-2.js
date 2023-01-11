@@ -18,7 +18,7 @@ const openingMessage = `
 그리고..\n
 또 하나의 새로운 문제가 나를 기다리고 있었다.\n\n\n`;
 
-const timeInterval = 80;
+const timeInterval = 50;
 
 let index = 0;
 

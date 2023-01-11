@@ -16,7 +16,7 @@ const openingMessage = `
 \n\n마치 매일 밥 먹듯이 이 짓을 해온 것처럼..
 \n\n\n`;
 
-const timeInterval = 80;
+const timeInterval = 50;
 
 let index = 0;
 
@@ -39,7 +39,7 @@ setTimeout(() => {
   clearInterval(typingTimer);
 }, timeInterval * openingMessage.length);
 
-// CODE 1
+// CODE 4
 
 const startDiv = document.querySelector(".start-div");
 
